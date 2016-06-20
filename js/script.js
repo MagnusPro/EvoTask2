@@ -3,7 +3,6 @@ var adjactives = ["добрый", "щедрый", "дружелюбный", "м�
 var names = [];
 $(document).ready(function(){
     $("#submit").click(function(e){
-        console.log('hi');
         e.preventDefault();
         name = $("#name").val().toLowerCase();
         if(name == "" || !per_name.test(name)){
@@ -11,7 +10,6 @@ $(document).ready(function(){
            return;
         }
         test = names.filter(function(person){return person.name == name})
-        console.log(adjactives)
         if(test.length){
             adjactive = test[0].adjactive
             $("#message").html("Рад тебя видеть снова, " + adjactive + " " + $("#name").val());
